@@ -1,0 +1,10 @@
+To import data from PTLS database its required to query it from dials table
+Create the queries using the following example:
+
+SELECT * FROM dials where SN="SomePT2KSN" and YEAR(RealReadDate)=2019 and MONTH(RealdReadDate)=9 
+INTO OUTFILE 'c:/mydirectory/myfile.csv' 
+FIELDS ENCLOSED BY '"' TERMINATED BY ';' ESCAPED BY '"';
+
+In case of needed root password for Mysql in windows computers is ODYSSEY99GRANITE
+
+Once the csvs are created use the csvs with the apropiate script in this folder

@@ -1,0 +1,4 @@
+- Stop the service ICI-DB
+- Update table meters
+- Update table Reg5Min
+- Restart the service ICI-DB

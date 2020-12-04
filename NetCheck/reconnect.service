@@ -1,0 +1,16 @@
+[Unit]
+Description=ICI eth0 checking service
+After=mysqld.service
+StartLimitIntervalSec=0
+
+[Service]
+Type=simple
+Restart=always
+RestartSec=60
+User=root
+ExecStart=/usr/bin/python3  /root/ICI/reconnect.py
+#StandardOutput=/var/log/Icilog
+#StandardError=/var/log/Icilog
+
+[Install]
+WantedBy=multi-user.target
