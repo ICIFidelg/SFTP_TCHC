@@ -38,10 +38,10 @@ def uploadTheFile(file2Upload,date2Confirm):
 	userName=serverArray[0]["userName"]
 	my_password=serverArray[0]["password"]
 	ftpDirectory="./"+serverArray[0]["directory"]
-	print(ftpServer)
-	print(userName)
-	print(my_password)
-	print(ftpDirectory)
+	#print(ftpServer)
+	#print(userName)
+	#print(my_password)
+	#print(ftpDirectory)
 	"""
 	try:
 		session = ftplib.FTP(ftpServer, userName, password)	
@@ -64,7 +64,7 @@ def uploadTheFile(file2Upload,date2Confirm):
 	#print(date2Confirm)
 	with pysftp.Connection(ftpServer,username=userName,password=my_password) as sftp:
 		with sftp.cd('./'):
-			print("dir was changed")
+			#print("dir was changed")
 			sftp.put(file2Upload)  	# upload file to allcode/pycode on remote
 	#print(date2Confirm)
 	sql= "UPDATE date4FTP SET dataUpload='yes' WHERE previousDate='%s'"%(date2Confirm)
